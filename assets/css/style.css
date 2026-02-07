@@ -3,6 +3,67 @@
  * Pico CSS をベースに拡張
  */
 
+/* 全体の中央揃え */
+body {
+    text-align: center;
+}
+
+main.container,
+header.container,
+footer.container {
+    text-align: center;
+}
+
+/* フォーム要素の中央揃え */
+form,
+.post-form,
+.topic-form,
+.setting-form,
+.comment-form,
+.vote-form,
+.filter-form {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* input, textarea, select の中央揃え */
+input,
+textarea,
+select {
+    text-align: center;
+}
+
+/* ボタンの中央揃え */
+button,
+[type="submit"],
+[type="button"] {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* カード・記事の中央揃え */
+article,
+.topic-card,
+.post-card,
+.preview-card {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* リストの中央揃え */
+.topic-list,
+.post-list {
+    align-items: center;
+}
+
+/* テーブルの中央揃え */
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* カラー変数 */
 :root {
     --color-posting: #4caf50;
@@ -76,6 +137,7 @@ header.container nav {
 
 .topic-card header {
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 0.5rem;
     flex-wrap: wrap;
@@ -113,6 +175,7 @@ header.container nav {
 
 .topic-detail header {
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 1rem;
     flex-wrap: wrap;
@@ -124,6 +187,7 @@ header.container nav {
 
 .topic-meta {
     display: flex;
+    justify-content: center;
     gap: 1rem;
     flex-wrap: wrap;
     color: var(--pico-muted-color);
@@ -146,8 +210,9 @@ header.container nav {
 
 .post-card header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    gap: 1rem;
     margin-bottom: 0.5rem;
 }
 
@@ -181,6 +246,7 @@ header.container nav {
 
 .vote-buttons {
     display: flex;
+    justify-content: center;
     gap: 0.5rem;
 }
 
@@ -209,6 +275,7 @@ header.container nav {
 
 .comment header {
     display: flex;
+    justify-content: center;
     gap: 0.5rem;
     align-items: center;
 }
@@ -223,6 +290,7 @@ header.container nav {
 
 .comment-form .form-row {
     display: flex;
+    justify-content: center;
     gap: 0.5rem;
 }
 
@@ -246,6 +314,7 @@ header.container nav {
 
 .line-input {
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 0.5rem;
 }
@@ -268,6 +337,7 @@ header.container nav {
 
 .form-actions {
     display: flex;
+    justify-content: center;
     gap: 0.5rem;
     margin-top: 1rem;
 }
@@ -282,12 +352,14 @@ header.container nav {
 
 .preview-actions {
     display: flex;
+    justify-content: center;
     gap: 0.5rem;
 }
 
 /* ランキング */
 .ranking-nav {
     display: flex;
+    justify-content: center;
     gap: 1rem;
     margin-bottom: 1.5rem;
 }
@@ -419,6 +491,7 @@ header.container nav {
 
 .view-tabs {
     display: flex;
+    justify-content: center;
     gap: 1rem;
     margin-bottom: 1rem;
     border-bottom: 2px solid var(--pico-muted-border-color);
@@ -447,6 +520,7 @@ header.container nav {
 
 .point-settings {
     display: flex;
+    justify-content: center;
     gap: 1rem;
     margin-bottom: 0.5rem;
 }
@@ -481,12 +555,12 @@ header.container nav {
 @media (max-width: 768px) {
     .topic-detail header {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
     }
 
     .post-card header {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         gap: 0.25rem;
     }
 
