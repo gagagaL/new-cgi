@@ -1,0 +1,28 @@
+# Bokegram .htaccess
+# Apache用設定ファイル
+
+# データディレクトリへのアクセスを禁止
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^data/ - [F,L]
+</IfModule>
+
+# PHP設定（必要に応じて）
+<IfModule mod_php.c>
+    php_value upload_max_filesize 10M
+    php_value post_max_size 10M
+    php_value max_execution_time 60
+</IfModule>
+
+# 文字エンコーディング
+AddDefaultCharset UTF-8
+
+# インデックスファイル
+DirectoryIndex index.php
+
+# セキュリティヘッダー
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-XSS-Protection "1; mode=block"
+</IfModule>
